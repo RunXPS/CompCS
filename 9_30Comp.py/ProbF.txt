@@ -1,0 +1,20 @@
+/*
+words ==> insert into a dict
+
+some queries: prefix, suffix , (and/or/xor) ==> find the number of words 
+*Aside*: and/or/xor - what words have both, have one or the other, have neither
+find the number of words
+
+Solution:
+- make a trie with alphabet for prefix/suffix
+- find each letter in each 'layer'
+- increment each letter according to how many were found
+
+- Key Idea: avoiding set operaion
+    ==> travese letters without using expensive set operations
+    ==> Solution: use tuples of each connected letter 
+    ==> EX (for word ICPC): (I,C) -> (C,P) -> (P,C)
+- subtract 'and' (overcounting): 
+- add 'or' (undercounting): 
+- subtract 'xor' (overcounting): 
+*/
